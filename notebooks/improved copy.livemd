@@ -1,0 +1,467 @@
+# Flowbite CSS Buttons TailwindPlayground
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.9.3"},
+  {:kino_tailwind_playground,
+   path: Path.expand(Path.join(["Project", "kino_tailwind_playground-main"]))}
+])
+```
+
+## Tasks
+
+```elixir
+# assigns = %{}
+```
+
+### Section
+
+---
+
+layout: home
+title: Tailwind CSS Buttons - Flowbite
+
+## description: Use the Tailwind CSS button component inside forms, as links, and more with support for multiple colors, sizes, and variations
+
+description: Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows
+group: components
+toc: true
+
+previous: Breadcrumbs
+previousLink: components/breadcrumb/
+next: Button group
+nextLink: components/button-group/
+
+---
+
+The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
+
+Flowbite provides a large variety of styles and sizes for the button component including outlined buttons, multiple colors, sizes, buttons with icons, and more.
+
+### Default button
+
+Use these default button styles with multiple colors to indicate an action or link within your website.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2RlZmF1bHQtYnV0dG9uLWRpdicgY2xhc3M9J2ZsZXggZmxleC13cmFwJyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1ibHVlLTgwMCBmb2N1czpyaW5nLTQgZm9jdXM6cmluZy1ibHVlLTMwMCBweS0yLjUgZGFyazpiZy1ibHVlLTYwMCBkYXJrOmhvdmVyOmJnLWJsdWUtNzAwIGZvY3VzOm91dGxpbmUtbm9uZSBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXdoaXRlIGJnLWJsdWUtNzAwIHJvdW5kZWQtbGcnPkRlZmF1bHQ8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0ncHktMi41IGZvY3VzOm91dGxpbmUtbm9uZSBob3ZlcjpiZy1ncmF5LTEwMCBob3Zlcjp0ZXh0LWJsdWUtNzAwIGZvY3VzOnotMTAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctZ3JheS0yMDAgZGFyazpmb2N1czpyaW5nLWdyYXktNzAwIGRhcms6YmctZ3JheS04MDAgZGFyazp0ZXh0LWdyYXktNDAwIGRhcms6Ym9yZGVyLWdyYXktNjAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmhvdmVyOmJnLWdyYXktNzAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCBiZy13aGl0ZSBib3JkZXIgYm9yZGVyLWdyYXktMjAwIHJvdW5kZWQtbGcnPkFsdGVybmF0aXZlPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLWdyYXktOTAwIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLTQgZm9jdXM6cmluZy1ncmF5LTMwMCBweS0yLjUgZGFyazpiZy1ncmF5LTgwMCBkYXJrOmhvdmVyOmJnLWdyYXktNzAwIGRhcms6Zm9jdXM6cmluZy1ncmF5LTcwMCBkYXJrOmJvcmRlci1ncmF5LTcwMCBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtd2hpdGUgYmctZ3JheS04MDAgcm91bmRlZC1sZyc+RGFyazwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdmb2N1czpvdXRsaW5lLW5vbmUgaG92ZXI6YmctZ3JheS0xMDAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctZ3JheS0yMDAgcHktMi41IGRhcms6YmctZ3JheS04MDAgZGFyazp0ZXh0LXdoaXRlIGRhcms6Ym9yZGVyLWdyYXktNjAwIGRhcms6aG92ZXI6YmctZ3JheS03MDAgZGFyazpob3Zlcjpib3JkZXItZ3JheS02MDAgZGFyazpmb2N1czpyaW5nLWdyYXktNzAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCBiZy13aGl0ZSBib3JkZXIgYm9yZGVyLWdyYXktMzAwIHJvdW5kZWQtbGcnPkxpZ2h0PC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2ZvY3VzOm91dGxpbmUtbm9uZSBob3ZlcjpiZy1ncmVlbi04MDAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctZ3JlZW4tMzAwIHB5LTIuNSBkYXJrOmJnLWdyZWVuLTYwMCBkYXJrOmhvdmVyOmJnLWdyZWVuLTcwMCBkYXJrOmZvY3VzOnJpbmctZ3JlZW4tODAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC13aGl0ZSBiZy1ncmVlbi03MDAgcm91bmRlZC1sZyc+R3JlZW48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nZm9jdXM6b3V0bGluZS1ub25lIGhvdmVyOmJnLXJlZC04MDAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctcmVkLTMwMCBweS0yLjUgZGFyazpiZy1yZWQtNjAwIGRhcms6aG92ZXI6YmctcmVkLTcwMCBkYXJrOmZvY3VzOnJpbmctcmVkLTkwMCBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtd2hpdGUgYmctcmVkLTcwMCByb3VuZGVkLWxnJz5SZWQ8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nZm9jdXM6b3V0bGluZS1ub25lIGhvdmVyOmJnLXllbGxvdy01MDAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmcteWVsbG93LTMwMCBweS0yLjUgZGFyazpmb2N1czpyaW5nLXllbGxvdy05MDAgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXdoaXRlIGJnLXllbGxvdy00MDAgcm91bmRlZC1sZyc+WWVsbG93PC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2ZvY3VzOm91dGxpbmUtbm9uZSBob3ZlcjpiZy1wdXJwbGUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLXB1cnBsZS0zMDAgcHktMi41IGRhcms6YmctcHVycGxlLTYwMCBkYXJrOmhvdmVyOmJnLXB1cnBsZS03MDAgZGFyazpmb2N1czpyaW5nLXB1cnBsZS05MDAgcHgtNSBtYi0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC13aGl0ZSBiZy1wdXJwbGUtNzAwIHJvdW5kZWQtbGcnPlB1cnBsZTwvYnV0dG9uPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='default-button-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 px-5 mb-2 mr-2 text-sm font-medium text-white bg-blue-700 rounded-lg'>Default</button>
+<button type='button' class='py-2.5 focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg'>Alternative</button>
+<button type='button' class='hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-white bg-gray-800 rounded-lg'>Dark</button>
+<button type='button' class='focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg'>Light</button>
+<button type='button' class='focus:outline-none hover:bg-green-800 focus:ring-4 focus:ring-green-300 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 px-5 mb-2 mr-2 text-sm font-medium text-white bg-green-700 rounded-lg'>Green</button>
+<button type='button' class='focus:outline-none hover:bg-red-800 focus:ring-4 focus:ring-red-300 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 px-5 mb-2 mr-2 text-sm font-medium text-white bg-red-700 rounded-lg'>Red</button>
+<button type='button' class='focus:outline-none hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 py-2.5 dark:focus:ring-yellow-900 px-5 mb-2 mr-2 text-sm font-medium text-white bg-yellow-400 rounded-lg'>Yellow</button>
+<button type='button' class='focus:outline-none hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 px-5 mb-2 text-sm font-medium text-white bg-purple-700 rounded-lg'>Purple</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Button pills
+
+The button pills can be used as an alternative style by using fully rounded edges.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1waWxscy1kaXYnIGNsYXNzPSdmbGV4IGZsZXgtd3JhcCcgZ2l0aHViPSdjb21wb25lbnRzL2J1dHRvbnMubWQnIHNob3dfZGFyaz10cnVlID5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLWJsdWUtMzAwIHB5LTIuNSBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWZ1bGwnPkRlZmF1bHQ8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0ncHktMi41IGZvY3VzOm91dGxpbmUtbm9uZSBob3ZlcjpiZy1ncmF5LTEwMCBob3Zlcjp0ZXh0LWJsdWUtNzAwIGZvY3VzOnotMTAgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctZ3JheS0yMDAgZGFyazpmb2N1czpyaW5nLWdyYXktNzAwIGRhcms6YmctZ3JheS04MDAgZGFyazp0ZXh0LWdyYXktNDAwIGRhcms6Ym9yZGVyLWdyYXktNjAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmhvdmVyOmJnLWdyYXktNzAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCBiZy13aGl0ZSBib3JkZXIgYm9yZGVyLWdyYXktMjAwIHJvdW5kZWQtZnVsbCc+QWx0ZXJuYXRpdmU8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctZ3JheS05MDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLWdyYXktMzAwIHB5LTIuNSBkYXJrOmJnLWdyYXktODAwIGRhcms6aG92ZXI6YmctZ3JheS03MDAgZGFyazpmb2N1czpyaW5nLWdyYXktNzAwIGRhcms6Ym9yZGVyLWdyYXktNzAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC13aGl0ZSBiZy1ncmF5LTgwMCByb3VuZGVkLWZ1bGwnPkRhcms8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nZm9jdXM6b3V0bGluZS1ub25lIGhvdmVyOmJnLWdyYXktMTAwIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLWdyYXktMjAwIHB5LTIuNSBkYXJrOmJnLWdyYXktODAwIGRhcms6dGV4dC13aGl0ZSBkYXJrOmJvcmRlci1ncmF5LTYwMCBkYXJrOmhvdmVyOmJnLWdyYXktNzAwIGRhcms6aG92ZXI6Ym9yZGVyLWdyYXktNjAwIGRhcms6Zm9jdXM6cmluZy1ncmF5LTcwMCBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtZ3JheS05MDAgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ncmF5LTMwMCByb3VuZGVkLWZ1bGwnPkxpZ2h0PC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLWdyZWVuLTgwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy00IGZvY3VzOnJpbmctZ3JlZW4tMzAwIHB5LTIuNSBkYXJrOmJnLWdyZWVuLTYwMCBkYXJrOmhvdmVyOmJnLWdyZWVuLTcwMCBkYXJrOmZvY3VzOnJpbmctZ3JlZW4tODAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ncmVlbi03MDAgcm91bmRlZC1mdWxsJz5HcmVlbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1yZWQtODAwIGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLTQgZm9jdXM6cmluZy1yZWQtMzAwIHB5LTIuNSBkYXJrOmJnLXJlZC02MDAgZGFyazpob3ZlcjpiZy1yZWQtNzAwIGRhcms6Zm9jdXM6cmluZy1yZWQtOTAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1yZWQtNzAwIHJvdW5kZWQtZnVsbCc+UmVkPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLXllbGxvdy01MDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLXllbGxvdy0zMDAgcHktMi41IGRhcms6Zm9jdXM6cmluZy15ZWxsb3ctOTAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy15ZWxsb3ctNDAwIHJvdW5kZWQtZnVsbCc+WWVsbG93PC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLXB1cnBsZS04MDAgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctNCBmb2N1czpyaW5nLXB1cnBsZS0zMDAgcHktMi41IGRhcms6YmctcHVycGxlLTYwMCBkYXJrOmhvdmVyOmJnLXB1cnBsZS03MDAgZGFyazpmb2N1czpyaW5nLXB1cnBsZS05MDAgcHgtNSBtYi0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1wdXJwbGUtNzAwIHJvdW5kZWQtZnVsbCc+UHVycGxlPC9idXR0b24+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-pills-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-5 mb-2 mr-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full'>Default</button>
+<button type='button' class='py-2.5 focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-full'>Alternative</button>
+<button type='button' class='hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-white bg-gray-800 rounded-full'>Dark</button>
+<button type='button' class='focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 px-5 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-full'>Light</button>
+<button type='button' class='hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 px-5 mb-2 mr-2 text-sm font-medium text-center text-white bg-green-700 rounded-full'>Green</button>
+<button type='button' class='hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 px-5 mb-2 mr-2 text-sm font-medium text-center text-white bg-red-700 rounded-full'>Red</button>
+<button type='button' class='hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 py-2.5 dark:focus:ring-yellow-900 px-5 mb-2 mr-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-full'>Yellow</button>
+<button type='button' class='hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 px-5 mb-2 text-sm font-medium text-center text-white bg-purple-700 rounded-full'>Purple</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Gradient monochrome
+
+These beautifully colored buttons built with the gradient color stops utility classes from Tailwind CSS can be used as a creative alternative to the default button styles.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1tb25vY2hyb21lLWRpdicgY2xhc3M9J2ZsZXggZmxleC13cmFwJyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1yIGZyb20tYmx1ZS01MDAgdmlhLWJsdWUtNjAwIHRvLWJsdWUtNzAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJyIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnJz5CbHVlPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1ncmVlbi00MDAgdmlhLWdyZWVuLTUwMCB0by1ncmVlbi02MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYnIgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWdyZWVuLTMwMCBkYXJrOmZvY3VzOnJpbmctZ3JlZW4tODAwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+R3JlZW48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLWN5YW4tNDAwIHZpYS1jeWFuLTUwMCB0by1jeWFuLTYwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctY3lhbi0zMDAgZGFyazpmb2N1czpyaW5nLWN5YW4tODAwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+Q3lhbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1yIGZyb20tdGVhbC00MDAgdmlhLXRlYWwtNTAwIHRvLXRlYWwtNjAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJyIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy10ZWFsLTMwMCBkYXJrOmZvY3VzOnJpbmctdGVhbC04MDAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnJz5UZWFsPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1saW1lLTIwMCB2aWEtbGltZS00MDAgdG8tbGltZS01MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYnIgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWxpbWUtMzAwIGRhcms6Zm9jdXM6cmluZy1saW1lLTgwMCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LWdyYXktOTAwIHJvdW5kZWQtbGcnPkxpbWU8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLXJlZC00MDAgdmlhLXJlZC01MDAgdG8tcmVkLTYwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctcmVkLTMwMCBkYXJrOmZvY3VzOnJpbmctcmVkLTgwMCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPlJlZDwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1yIGZyb20tcGluay00MDAgdmlhLXBpbmstNTAwIHRvLXBpbmstNjAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJyIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1waW5rLTMwMCBkYXJrOmZvY3VzOnJpbmctcGluay04MDAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnJz5QaW5rPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1wdXJwbGUtNTAwIHZpYS1wdXJwbGUtNjAwIHRvLXB1cnBsZS03MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYnIgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXB1cnBsZS0zMDAgZGFyazpmb2N1czpyaW5nLXB1cnBsZS04MDAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnJz5QdXJwbGU8L2J1dHRvbj5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-monochrome-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Blue</button>
+<button type='button' class='bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Green</button>
+<button type='button' class='bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Cyan</button>
+<button type='button' class='bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Teal</button>
+<button type='button' class='bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-gray-900 rounded-lg'>Lime</button>
+<button type='button' class='bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Red</button>
+<button type='button' class='bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Pink</button>
+<button type='button' class='bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Purple</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Gradient duotone
+
+These buttons use a style that includes two contrasted colors creating an impressive mesh gradient effect.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1kdW90b25lLWRpdicgY2xhc3M9J2ZsZXggZmxleC13cmFwJyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1iciBmcm9tLXB1cnBsZS02MDAgdG8tYmx1ZS01MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYmwgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPlB1cnBsZSB0byBCbHVlPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1jeWFuLTUwMCB0by1ibHVlLTUwMCBob3ZlcjpiZy1ncmFkaWVudC10by1ibCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctY3lhbi0zMDAgZGFyazpmb2N1czpyaW5nLWN5YW4tODAwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+Q3lhbiB0byBCbHVlPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLWJyIGZyb20tZ3JlZW4tNDAwIHRvLWJsdWUtNjAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJsIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ncmVlbi0yMDAgZGFyazpmb2N1czpyaW5nLWdyZWVuLTgwMCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPkdyZWVuIHRvIEJsdWU8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLXB1cnBsZS01MDAgdG8tcGluay01MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tbCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctcHVycGxlLTIwMCBkYXJrOmZvY3VzOnJpbmctcHVycGxlLTgwMCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPlB1cnBsZSB0byBQaW5rPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLWJyIGZyb20tcGluay01MDAgdG8tb3JhbmdlLTQwMCBob3ZlcjpiZy1ncmFkaWVudC10by1ibCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctcGluay0yMDAgZGFyazpmb2N1czpyaW5nLXBpbmstODAwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+UGluayB0byBPcmFuZ2U8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLXRlYWwtMjAwIHRvLWxpbWUtMjAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWwgaG92ZXI6ZnJvbS10ZWFsLTIwMCBob3Zlcjp0by1saW1lLTIwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctbGltZS0yMDAgZGFyazpmb2N1czpyaW5nLXRlYWwtNzAwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtZ3JheS05MDAgcm91bmRlZC1sZyc+VGVhbCB0byBMaW1lPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1yZWQtMjAwIHZpYS1yZWQtMzAwIHRvLXllbGxvdy0yMDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYmwgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXJlZC0xMDAgZGFyazpmb2N1czpyaW5nLXJlZC00MDAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC1ncmF5LTkwMCByb3VuZGVkLWxnJz5SZWQgdG8gWWVsbG93PC9idXR0b24+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-duotone-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Purple to Blue</button>
+<button type='button' class='bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Cyan to Blue</button>
+<button type='button' class='bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Green to Blue</button>
+<button type='button' class='bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Purple to Pink</button>
+<button type='button' class='bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>Pink to Orange</button>
+<button type='button' class='bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-gray-900 rounded-lg'>Teal to Lime</button>
+<button type='button' class='bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-gray-900 rounded-lg'>Red to Yellow</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Gradient outline
+
+This is a special button style that incorporates a gradient color for the outline that can be used as a secondary style to the fully colored gradient buttons.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1ncmFkaWVudC1vdXRsaW5lLWRpdicgY2xhc3M9J2ZsZXggZmxleC13cmFwJyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiBjbGFzcz0ncC0wLjUgZ3JvdXAgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1wdXJwbGUtNjAwIHRvLWJsdWUtNTAwIGdyb3VwLWhvdmVyOmZyb20tcHVycGxlLTYwMCBncm91cC1ob3Zlcjp0by1ibHVlLTUwMCBob3Zlcjp0ZXh0LXdoaXRlIGRhcms6dGV4dC13aGl0ZSBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIHJlbGF0aXZlIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi0yIG1yLTIgb3ZlcmZsb3ctaGlkZGVuIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCByb3VuZGVkLWxnJz5cbiAgPHNwYW4gY2xhc3M9J3B5LTIuNSBkYXJrOmJnLWdyYXktOTAwIGdyb3VwLWhvdmVyOmJnLW9wYWNpdHktMCByZWxhdGl2ZSBweC01IHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTc1IGVhc2UtaW4gYmctd2hpdGUgcm91bmRlZC1tZCc+XG4gICAgICBQdXJwbGUgdG8gYmx1ZVxuICA8L3NwYW4+XG48L2J1dHRvbj5cbjxidXR0b24gY2xhc3M9J3AtMC41IGdyb3VwIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tY3lhbi01MDAgdG8tYmx1ZS01MDAgZ3JvdXAtaG92ZXI6ZnJvbS1jeWFuLTUwMCBncm91cC1ob3Zlcjp0by1ibHVlLTUwMCBob3Zlcjp0ZXh0LXdoaXRlIGRhcms6dGV4dC13aGl0ZSBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctY3lhbi0yMDAgZGFyazpmb2N1czpyaW5nLWN5YW4tODAwIHJlbGF0aXZlIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi0yIG1yLTIgb3ZlcmZsb3ctaGlkZGVuIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCByb3VuZGVkLWxnJz5cbiAgPHNwYW4gY2xhc3M9J3B5LTIuNSBkYXJrOmJnLWdyYXktOTAwIGdyb3VwLWhvdmVyOmJnLW9wYWNpdHktMCByZWxhdGl2ZSBweC01IHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTc1IGVhc2UtaW4gYmctd2hpdGUgcm91bmRlZC1tZCc+XG4gICAgICBDeWFuIHRvIGJsdWVcbiAgPC9zcGFuPlxuPC9idXR0b24+XG48YnV0dG9uIGNsYXNzPSdwLTAuNSBncm91cCBiZy1ncmFkaWVudC10by1iciBmcm9tLWdyZWVuLTQwMCB0by1ibHVlLTYwMCBncm91cC1ob3Zlcjpmcm9tLWdyZWVuLTQwMCBncm91cC1ob3Zlcjp0by1ibHVlLTYwMCBob3Zlcjp0ZXh0LXdoaXRlIGRhcms6dGV4dC13aGl0ZSBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctZ3JlZW4tMjAwIGRhcms6Zm9jdXM6cmluZy1ncmVlbi04MDAgcmVsYXRpdmUgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIG1iLTIgbXItMiBvdmVyZmxvdy1oaWRkZW4gdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWdyYXktOTAwIHJvdW5kZWQtbGcnPlxuICA8c3BhbiBjbGFzcz0ncHktMi41IGRhcms6YmctZ3JheS05MDAgZ3JvdXAtaG92ZXI6Ymctb3BhY2l0eS0wIHJlbGF0aXZlIHB4LTUgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tNzUgZWFzZS1pbiBiZy13aGl0ZSByb3VuZGVkLW1kJz5cbiAgICAgIEdyZWVuIHRvIGJsdWVcbiAgPC9zcGFuPlxuPC9idXR0b24+XG48YnV0dG9uIGNsYXNzPSdwLTAuNSBncm91cCBiZy1ncmFkaWVudC10by1iciBmcm9tLXB1cnBsZS01MDAgdG8tcGluay01MDAgZ3JvdXAtaG92ZXI6ZnJvbS1wdXJwbGUtNTAwIGdyb3VwLWhvdmVyOnRvLXBpbmstNTAwIGhvdmVyOnRleHQtd2hpdGUgZGFyazp0ZXh0LXdoaXRlIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1wdXJwbGUtMjAwIGRhcms6Zm9jdXM6cmluZy1wdXJwbGUtODAwIHJlbGF0aXZlIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi0yIG1yLTIgb3ZlcmZsb3ctaGlkZGVuIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCByb3VuZGVkLWxnJz5cbiAgPHNwYW4gY2xhc3M9J3B5LTIuNSBkYXJrOmJnLWdyYXktOTAwIGdyb3VwLWhvdmVyOmJnLW9wYWNpdHktMCByZWxhdGl2ZSBweC01IHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTc1IGVhc2UtaW4gYmctd2hpdGUgcm91bmRlZC1tZCc+XG4gICAgICBQdXJwbGUgdG8gcGlua1xuICA8L3NwYW4+XG48L2J1dHRvbj5cbjxidXR0b24gY2xhc3M9J3AtMC41IGdyb3VwIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tcGluay01MDAgdG8tb3JhbmdlLTQwMCBncm91cC1ob3Zlcjpmcm9tLXBpbmstNTAwIGdyb3VwLWhvdmVyOnRvLW9yYW5nZS00MDAgaG92ZXI6dGV4dC13aGl0ZSBkYXJrOnRleHQtd2hpdGUgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXBpbmstMjAwIGRhcms6Zm9jdXM6cmluZy1waW5rLTgwMCByZWxhdGl2ZSBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWItMiBtci0yIG92ZXJmbG93LWhpZGRlbiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtZ3JheS05MDAgcm91bmRlZC1sZyc+XG4gIDxzcGFuIGNsYXNzPSdweS0yLjUgZGFyazpiZy1ncmF5LTkwMCBncm91cC1ob3ZlcjpiZy1vcGFjaXR5LTAgcmVsYXRpdmUgcHgtNSB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi03NSBlYXNlLWluIGJnLXdoaXRlIHJvdW5kZWQtbWQnPlxuICAgICAgUGluayB0byBvcmFuZ2VcbiAgPC9zcGFuPlxuPC9idXR0b24+XG48YnV0dG9uIGNsYXNzPSdwLTAuNSBncm91cCBiZy1ncmFkaWVudC10by1iciBmcm9tLXRlYWwtMzAwIHRvLWxpbWUtMzAwIGdyb3VwLWhvdmVyOmZyb20tdGVhbC0zMDAgZ3JvdXAtaG92ZXI6dG8tbGltZS0zMDAgZGFyazp0ZXh0LXdoaXRlIGRhcms6aG92ZXI6dGV4dC1ncmF5LTkwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctbGltZS0yMDAgZGFyazpmb2N1czpyaW5nLWxpbWUtODAwIHJlbGF0aXZlIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi0yIG1yLTIgb3ZlcmZsb3ctaGlkZGVuIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMCByb3VuZGVkLWxnJz5cbiAgPHNwYW4gY2xhc3M9J3B5LTIuNSBkYXJrOmJnLWdyYXktOTAwIGdyb3VwLWhvdmVyOmJnLW9wYWNpdHktMCByZWxhdGl2ZSBweC01IHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTc1IGVhc2UtaW4gYmctd2hpdGUgcm91bmRlZC1tZCc+XG4gICAgICBUZWFsIHRvIExpbWVcbiAgPC9zcGFuPlxuPC9idXR0b24+XG4gIDxidXR0b24gY2xhc3M9J3AtMC41IGdyb3VwIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tcmVkLTIwMCB2aWEtcmVkLTMwMCB0by15ZWxsb3ctMjAwIGdyb3VwLWhvdmVyOmZyb20tcmVkLTIwMCBncm91cC1ob3Zlcjp2aWEtcmVkLTMwMCBncm91cC1ob3Zlcjp0by15ZWxsb3ctMjAwIGRhcms6dGV4dC13aGl0ZSBkYXJrOmhvdmVyOnRleHQtZ3JheS05MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXJlZC0xMDAgZGFyazpmb2N1czpyaW5nLXJlZC00MDAgcmVsYXRpdmUgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIG1iLTIgbXItMiBvdmVyZmxvdy1oaWRkZW4gdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWdyYXktOTAwIHJvdW5kZWQtbGcnPlxuICA8c3BhbiBjbGFzcz0ncHktMi41IGRhcms6YmctZ3JheS05MDAgZ3JvdXAtaG92ZXI6Ymctb3BhY2l0eS0wIHJlbGF0aXZlIHB4LTUgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tNzUgZWFzZS1pbiBiZy13aGl0ZSByb3VuZGVkLW1kJz5cbiAgICAgIFJlZCB0byBZZWxsb3dcbiAgPC9zcGFuPlxuPC9idXR0b24+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-gradient-outline-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button class='p-0.5 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Purple to blue
+  </span>
+</button>
+<button class='p-0.5 group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Cyan to blue
+  </span>
+</button>
+<button class='p-0.5 group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Green to blue
+  </span>
+</button>
+<button class='p-0.5 group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Purple to pink
+  </span>
+</button>
+<button class='p-0.5 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Pink to orange
+  </span>
+</button>
+<button class='p-0.5 group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Teal to Lime
+  </span>
+</button>
+  <button class='p-0.5 group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 relative inline-flex items-center justify-center mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg'>
+  <span class='py-2.5 dark:bg-gray-900 group-hover:bg-opacity-0 relative px-5 transition-all duration-75 ease-in bg-white rounded-md'>
+      Red to Yellow
+  </span>
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Colored shadows
+
+These beautiful button elements with color shadows can be used since the release of Tailwind v3.0.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1jb2xvcmVkLXNoYWRvd3MtZGl2JyBjbGFzcz0nZmxleCBmbGV4LXdyYXAnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS1ibHVlLTUwMCB2aWEtYmx1ZS02MDAgdG8tYmx1ZS03MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYnIgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBzaGFkb3ctYmx1ZS01MDAvNTAgZGFyazpzaGFkb3ctbGcgZGFyazpzaGFkb3ctYmx1ZS04MDAvODAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnIHNoYWRvdy1sZyAnPkJsdWU8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLWdyZWVuLTQwMCB2aWEtZ3JlZW4tNTAwIHRvLWdyZWVuLTYwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctZ3JlZW4tMzAwIGRhcms6Zm9jdXM6cmluZy1ncmVlbi04MDAgc2hhZG93LWdyZWVuLTUwMC81MCBkYXJrOnNoYWRvdy1sZyBkYXJrOnNoYWRvdy1ncmVlbi04MDAvODAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnIHNoYWRvdy1sZyc+R3JlZW48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLWN5YW4tNDAwIHZpYS1jeWFuLTUwMCB0by1jeWFuLTYwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctY3lhbi0zMDAgZGFyazpmb2N1czpyaW5nLWN5YW4tODAwIHNoYWRvdy1jeWFuLTUwMC81MCBkYXJrOnNoYWRvdy1sZyBkYXJrOnNoYWRvdy1jeWFuLTgwMC84MCBweS0yLjUgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcgc2hhZG93LWxnJz5DeWFuPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLWdyYWRpZW50LXRvLXIgZnJvbS10ZWFsLTQwMCB2aWEtdGVhbC01MDAgdG8tdGVhbC02MDAgaG92ZXI6YmctZ3JhZGllbnQtdG8tYnIgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXRlYWwtMzAwIGRhcms6Zm9jdXM6cmluZy10ZWFsLTgwMCBzaGFkb3ctdGVhbC01MDAvNTAgZGFyazpzaGFkb3ctbGcgZGFyazpzaGFkb3ctdGVhbC04MDAvODAgcHktMi41IHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnIHNoYWRvdy1sZyc+VGVhbDwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1yIGZyb20tbGltZS0yMDAgdmlhLWxpbWUtNDAwIHRvLWxpbWUtNTAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJyIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1saW1lLTMwMCBkYXJrOmZvY3VzOnJpbmctbGltZS04MDAgc2hhZG93LWxpbWUtNTAwLzUwIGRhcms6c2hhZG93LWxnIGRhcms6c2hhZG93LWxpbWUtODAwLzgwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtZ3JheS05MDAgcm91bmRlZC1sZyBzaGFkb3ctbGcnPkxpbWU8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLXJlZC00MDAgdmlhLXJlZC01MDAgdG8tcmVkLTYwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctcmVkLTMwMCBkYXJrOmZvY3VzOnJpbmctcmVkLTgwMCBzaGFkb3ctcmVkLTUwMC81MCBkYXJrOnNoYWRvdy1sZyBkYXJrOnNoYWRvdy1yZWQtODAwLzgwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyBzaGFkb3ctbGcnPlJlZDwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1ncmFkaWVudC10by1yIGZyb20tcGluay00MDAgdmlhLXBpbmstNTAwIHRvLXBpbmstNjAwIGhvdmVyOmJnLWdyYWRpZW50LXRvLWJyIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1waW5rLTMwMCBkYXJrOmZvY3VzOnJpbmctcGluay04MDAgc2hhZG93LXBpbmstNTAwLzUwIGRhcms6c2hhZG93LWxnIGRhcms6c2hhZG93LXBpbmstODAwLzgwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyBzaGFkb3ctbGcnPlBpbms8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctZ3JhZGllbnQtdG8tciBmcm9tLXB1cnBsZS01MDAgdmlhLXB1cnBsZS02MDAgdG8tcHVycGxlLTcwMCBob3ZlcjpiZy1ncmFkaWVudC10by1iciBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctcHVycGxlLTMwMCBkYXJrOmZvY3VzOnJpbmctcHVycGxlLTgwMCBzaGFkb3ctcHVycGxlLTUwMC81MCBkYXJrOnNoYWRvdy1sZyBkYXJrOnNoYWRvdy1wdXJwbGUtODAwLzgwIHB5LTIuNSBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyBzaGFkb3ctbGcnPlB1cnBsZTwvYnV0dG9uPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-colored-shadows-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg '>Blue</button>
+<button type='button' class='bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Green</button>
+<button type='button' class='bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Cyan</button>
+<button type='button' class='bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Teal</button>
+<button type='button' class='bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-gray-900 rounded-lg shadow-lg'>Lime</button>
+<button type='button' class='bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Red</button>
+<button type='button' class='bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Pink</button>
+<button type='button' class='bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 py-2.5 px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg shadow-lg'>Purple</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Social buttons
+
+Use these button styles when building social media login forms using Facebook, Twitter, GitHub, Google, and Apple. These buttons use the new `bg-[#hex]` utility classses from Tailwind CSS v3.0.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1zb2NpYWwtZGl2JyBjbGFzcz0nZmxleCBmbGV4LXdyYXAnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2JnLVsjM2I1OTk4XSBob3ZlcjpiZy1bIzNiNTk5OF0vOTAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLVsjM2I1OTk4XS81MCBweS0yLjUgZGFyazpmb2N1czpyaW5nLVsjM2I1OTk4XS81NSBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPlxuICA8c3ZnIGNsYXNzPSd3LTQgaC00IG1yLTInIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J2N1cnJlbnRDb2xvcicgdmlld0JveD0nMCAwIDggMTknPlxuICAgIDxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTYuMTM1IDNIOFYwSDYuMTM1YTQuMTQ3IDQuMTQ3IDAgMCAwLTQuMTQyIDQuMTQyVjZIMHYzaDJ2OS45MzhoM1Y5aDIuMDIxbC41OTItM0g1VjMuNTkxQS42LjYgMCAwIDEgNS41OTIgM2guNTQzWicgY2xpcC1ydWxlPSdldmVub2RkJy8+XG4gIDwvc3ZnPlxuICBTaWduIGluIHdpdGggRmFjZWJvb2tcbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1bIzFkYTFmMl0gaG92ZXI6YmctWyMxZGExZjJdLzkwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1bIzFkYTFmMl0vNTAgcHktMi41IGRhcms6Zm9jdXM6cmluZy1bIzFkYTFmMl0vNTUgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy00IGgtNCBtci0yJyBhcmlhLWhpZGRlbj0ndHJ1ZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBmaWxsPSdjdXJyZW50Q29sb3InIHZpZXdCb3g9JzAgMCAyMCAxNyc+XG4gICAgPHBhdGggZmlsbC1ydWxlPSdldmVub2RkJyBkPSdNMjAgMS44OTJhOC4xNzggOC4xNzggMCAwIDEtMi4zNTUuNjM1IDQuMDc0IDQuMDc0IDAgMCAwIDEuOC0yLjIzNSA4LjM0NCA4LjM0NCAwIDAgMS0yLjYwNS45OEE0LjEzIDQuMTMgMCAwIDAgMTMuODUgMGE0LjA2OCA0LjA2OCAwIDAgMC00LjEgNC4wMzggNCA0IDAgMCAwIC4xMDUuOTE5QTExLjcwNSAxMS43MDUgMCAwIDEgMS40LjczNGE0LjAwNiA0LjAwNiAwIDAgMCAxLjI2OCA1LjM5MiA0LjE2NSA0LjE2NSAwIDAgMS0xLjg1OS0uNXYuMDVBNC4wNTcgNC4wNTcgMCAwIDAgNC4xIDkuNjM1YTQuMTkgNC4xOSAwIDAgMS0xLjg1Ni4wNyA0LjEwOCA0LjEwOCAwIDAgMCAzLjgzMSAyLjgwN0E4LjM2IDguMzYgMCAwIDEgMCAxNC4xODQgMTEuNzMyIDExLjczMiAwIDAgMCA2LjI5MSAxNiAxMS41MDIgMTEuNTAyIDAgMCAwIDE3Ljk2NCA0LjVjMC0uMTc3IDAtLjM1LS4wMTItLjUyM0E4LjE0MyA4LjE0MyAwIDAgMCAyMCAxLjg5MlonIGNsaXAtcnVsZT0nZXZlbm9kZCcvPlxuICA8L3N2Zz5cbiAgU2lnbiBpbiB3aXRoIFR3aXR0ZXJcbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdiZy1bIzI0MjkyRl0gaG92ZXI6YmctWyMyNDI5MkZdLzkwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1bIzI0MjkyRl0vNTAgcHktMi41IGRhcms6Zm9jdXM6cmluZy1ncmF5LTUwMCBkYXJrOmhvdmVyOmJnLVsjMDUwNzA4XS8zMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIHJvdW5kZWQtbGcnPlxuICA8c3ZnIGNsYXNzPSd3LTQgaC00IG1yLTInIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J2N1cnJlbnRDb2xvcicgdmlld0JveD0nMCAwIDIwIDIwJz5cbiAgICA8cGF0aCBmaWxsLXJ1bGU9J2V2ZW5vZGQnIGQ9J00xMCAuMzMzQTkuOTExIDkuOTExIDAgMCAwIDYuODY2IDE5LjY1Yy41LjA5Mi42NzgtLjIxNS42NzgtLjQ3NyAwLS4yMzctLjAxLTEuMDE3LS4wMTQtMS44NDUtMi43NTcuNi0zLjMzOC0xLjE2OS0zLjMzOC0xLjE2OWEyLjYyNyAyLjYyNyAwIDAgMC0xLjEtMS40NTFjLS45LS42MTUuMDctLjYuMDctLjZhMi4wODQgMi4wODQgMCAwIDEgMS41MTggMS4wMjEgMi4xMSAyLjExIDAgMCAwIDIuODg0LjgyM2MuMDQ0LS41MDMuMjY4LS45NzMuNjMtMS4zMjUtMi4yLS4yNS00LjUxNi0xLjEtNC41MTYtNC45QTMuODMyIDMuODMyIDAgMCAxIDQuNyA3LjA2OGEzLjU2IDMuNTYgMCAwIDEgLjA5NS0yLjYyM3MuODMyLS4yNjYgMi43MjYgMS4wMTZhOS40MDkgOS40MDkgMCAwIDEgNC45NjIgMGMxLjg5LTEuMjgyIDIuNzE3LTEuMDE2IDIuNzE3LTEuMDE2LjM2Ni44My40MDIgMS43NjguMSAyLjYyM2EzLjgyNyAzLjgyNyAwIDAgMSAxLjAyIDIuNjU5YzAgMy44MDctMi4zMTkgNC42NDQtNC41MjUgNC44ODlhMi4zNjYgMi4zNjYgMCAwIDEgLjY3MyAxLjgzNGMwIDEuMzI2LS4wMTIgMi4zOTQtLjAxMiAyLjcyIDAgLjI2My4xOC41NzIuNjgxLjQ3NUE5LjkxMSA5LjkxMSAwIDAgMCAxMCAuMzMzWicgY2xpcC1ydWxlPSdldmVub2RkJy8+XG4gIDwvc3ZnPlxuICBTaWduIGluIHdpdGggR2l0aHViXG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctWyM0Mjg1RjRdIGhvdmVyOmJnLVsjNDI4NUY0XS85MCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctWyM0Mjg1RjRdLzUwIHB5LTIuNSBkYXJrOmZvY3VzOnJpbmctWyM0Mjg1RjRdLzU1IGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+XG4gIDxzdmcgY2xhc3M9J3ctNCBoLTQgbXItMicgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMTggMTknPlxuICAgIDxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTguODQyIDE4LjA4M2E4LjggOC44IDAgMCAxLTguNjUtOC45NDggOC44NDEgOC44NDEgMCAwIDEgOC44LTguNjUyaC4xNTNhOC40NjQgOC40NjQgMCAwIDEgNS43IDIuMjU3bC0yLjE5MyAyLjAzOEE1LjI3IDUuMjcgMCAwIDAgOS4wOSAzLjRhNS44ODIgNS44ODIgMCAwIDAtLjIgMTEuNzZoLjEyNGE1LjA5MSA1LjA5MSAwIDAgMCA1LjI0OC00LjA1N0wxNC4zIDExSDlWOGg4LjM0Yy4wNjYuNTQzLjA5NSAxLjA5LjA4OCAxLjYzNi0uMDg2IDUuMDUzLTMuNDYzIDguNDQ5LTguNCA4LjQ0OWwtLjE4Ni0uMDAyWicgY2xpcC1ydWxlPSdldmVub2RkJy8+XG4gIDwvc3ZnPlxuICBTaWduIGluIHdpdGggR29vZ2xlXG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0nYmctWyMwNTA3MDhdIGhvdmVyOmJnLVsjMDUwNzA4XS85MCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctWyMwNTA3MDhdLzUwIHB5LTIuNSBkYXJrOmZvY3VzOnJpbmctWyMwNTA3MDhdLzUwIGRhcms6aG92ZXI6YmctWyMwNTA3MDhdLzMwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgcm91bmRlZC1sZyc+XG4gIDxzdmcgY2xhc3M9J3ctNSBoLTUgbXItMiAtbWwtMScgYXJpYS1oaWRkZW49J3RydWUnIGZvY3VzYWJsZT0nZmFsc2UnIGRhdGEtcHJlZml4PSdmYWInIGRhdGEtaWNvbj0nYXBwbGUnIHJvbGU9J2ltZycgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMzg0IDUxMic+PHBhdGggZmlsbD0nY3VycmVudENvbG9yJyBkPSdNMzE4LjcgMjY4LjdjLS4yLTM2LjcgMTYuNC02NC40IDUwLTg0LjgtMTguOC0yNi45LTQ3LjItNDEuNy04NC43LTQ0LjYtMzUuNS0yLjgtNzQuMyAyMC43LTg4LjUgMjAuNy0xNSAwLTQ5LjQtMTkuNy03Ni40LTE5LjdDNjMuMyAxNDEuMiA0IDE4NC44IDQgMjczLjVxMCAzOS4zIDE0LjQgODEuMmMxMi44IDM2LjcgNTkgMTI2LjcgMTA3LjIgMTI1LjIgMjUuMi0uNiA0My0xNy45IDc1LjgtMTcuOSAzMS44IDAgNDguMyAxNy45IDc2LjQgMTcuOSA0OC42LS43IDkwLjQtODIuNSAxMDIuNi0xMTkuMy02NS4yLTMwLjctNjEuNy05MC02MS43LTkxLjl6bS01Ni42LTE2NC4yYzI3LjMtMzIuNCAyNC44LTYxLjkgMjQtNzIuNS0yNC4xIDEuNC01MiAxNi40LTY3LjkgMzQuOS0xNy41IDE5LjgtMjcuOCA0NC4zLTI1LjYgNzEuOSAyNi4xIDIgNDkuOS0xMS40IDY5LjUtMzQuM3onPjwvcGF0aD48L3N2Zz5cbiAgU2lnbiBpbiB3aXRoIEFwcGxlXG48L2J1dHRvbj5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-social-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 py-2.5 dark:focus:ring-[#3b5998]/55 inline-flex items-center px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>
+  <svg class='w-4 h-4 mr-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 8 19'>
+    <path fill-rule='evenodd' d='M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z' clip-rule='evenodd'/>
+  </svg>
+  Sign in with Facebook
+</button>
+<button type='button' class='bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 py-2.5 dark:focus:ring-[#1da1f2]/55 inline-flex items-center px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>
+  <svg class='w-4 h-4 mr-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 17'>
+    <path fill-rule='evenodd' d='M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z' clip-rule='evenodd'/>
+  </svg>
+  Sign in with Twitter
+</button>
+<button type='button' class='bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 py-2.5 dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 inline-flex items-center px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>
+  <svg class='w-4 h-4 mr-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 20'>
+    <path fill-rule='evenodd' d='M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z' clip-rule='evenodd'/>
+  </svg>
+  Sign in with Github
+</button>
+<button type='button' class='bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 py-2.5 dark:focus:ring-[#4285F4]/55 inline-flex items-center px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>
+  <svg class='w-4 h-4 mr-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 18 19'>
+    <path fill-rule='evenodd' d='M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z' clip-rule='evenodd'/>
+  </svg>
+  Sign in with Google
+</button>
+<button type='button' class='bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 py-2.5 dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 inline-flex items-center px-5 mb-2 mr-2 text-sm font-medium text-center text-white rounded-lg'>
+  <svg class='w-5 h-5 mr-2 -ml-1' aria-hidden='true' focusable='false' data-prefix='fab' data-icon='apple' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'><path fill='currentColor' d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'></path></svg>
+  Sign in with Apple
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Outline buttons
+
+Use the following button styles to show the colors only for the border of the element.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1vdXRsaW5lLWRpdicgY2xhc3M9J2ZsZXggZmxleC13cmFwJyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3Zlcjp0ZXh0LXdoaXRlIGhvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBweS0yLjUgZGFyazpib3JkZXItYmx1ZS01MDAgZGFyazp0ZXh0LWJsdWUtNTAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmhvdmVyOmJnLWJsdWUtNTAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtYmx1ZS03MDAgYm9yZGVyIGJvcmRlci1ibHVlLTcwMCByb3VuZGVkLWxnJz5EZWZhdWx0PC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOnRleHQtd2hpdGUgaG92ZXI6YmctZ3JheS05MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWdyYXktMzAwIHB5LTIuNSBkYXJrOmJvcmRlci1ncmF5LTYwMCBkYXJrOnRleHQtZ3JheS00MDAgZGFyazpob3Zlcjp0ZXh0LXdoaXRlIGRhcms6aG92ZXI6YmctZ3JheS02MDAgZGFyazpmb2N1czpyaW5nLWdyYXktODAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC1ncmF5LTkwMCBib3JkZXIgYm9yZGVyLWdyYXktODAwIHJvdW5kZWQtbGcnPkRhcms8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6dGV4dC13aGl0ZSBob3ZlcjpiZy1ncmVlbi04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWdyZWVuLTMwMCBweS0yLjUgZGFyazpib3JkZXItZ3JlZW4tNTAwIGRhcms6dGV4dC1ncmVlbi01MDAgZGFyazpob3Zlcjp0ZXh0LXdoaXRlIGRhcms6aG92ZXI6YmctZ3JlZW4tNjAwIGRhcms6Zm9jdXM6cmluZy1ncmVlbi04MDAgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LWdyZWVuLTcwMCBib3JkZXIgYm9yZGVyLWdyZWVuLTcwMCByb3VuZGVkLWxnJz5HcmVlbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3Zlcjp0ZXh0LXdoaXRlIGhvdmVyOmJnLXJlZC04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLXJlZC0zMDAgcHktMi41IGRhcms6Ym9yZGVyLXJlZC01MDAgZGFyazp0ZXh0LXJlZC01MDAgZGFyazpob3Zlcjp0ZXh0LXdoaXRlIGRhcms6aG92ZXI6YmctcmVkLTYwMCBkYXJrOmZvY3VzOnJpbmctcmVkLTkwMCBweC01IG1iLTIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtcmVkLTcwMCBib3JkZXIgYm9yZGVyLXJlZC03MDAgcm91bmRlZC1sZyc+UmVkPC9idXR0b24+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOnRleHQtd2hpdGUgaG92ZXI6YmcteWVsbG93LTUwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmcteWVsbG93LTMwMCBweS0yLjUgZGFyazpib3JkZXIteWVsbG93LTMwMCBkYXJrOnRleHQteWVsbG93LTMwMCBkYXJrOmhvdmVyOnRleHQtd2hpdGUgZGFyazpob3ZlcjpiZy15ZWxsb3ctNDAwIGRhcms6Zm9jdXM6cmluZy15ZWxsb3ctOTAwIHB4LTUgbWItMiBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC15ZWxsb3ctNDAwIGJvcmRlciBib3JkZXIteWVsbG93LTQwMCByb3VuZGVkLWxnJz5ZZWxsb3c8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6dGV4dC13aGl0ZSBob3ZlcjpiZy1wdXJwbGUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1wdXJwbGUtMzAwIHB5LTIuNSBkYXJrOmJvcmRlci1wdXJwbGUtNDAwIGRhcms6dGV4dC1wdXJwbGUtNDAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmhvdmVyOmJnLXB1cnBsZS01MDAgZGFyazpmb2N1czpyaW5nLXB1cnBsZS05MDAgcHgtNSBtYi0yIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXB1cnBsZS03MDAgYm9yZGVyIGJvcmRlci1wdXJwbGUtNzAwIHJvdW5kZWQtbGcnPlB1cnBsZTwvYnV0dG9uPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-outline-div' class='flex flex-wrap' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 py-2.5 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 px-5 mb-2 mr-2 text-sm font-medium text-center text-blue-700 border border-blue-700 rounded-lg'>Default</button>
+<button type='button' class='hover:text-white hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 py-2.5 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800 px-5 mb-2 mr-2 text-sm font-medium text-center text-gray-900 border border-gray-800 rounded-lg'>Dark</button>
+<button type='button' class='hover:text-white hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 py-2.5 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 px-5 mb-2 mr-2 text-sm font-medium text-center text-green-700 border border-green-700 rounded-lg'>Green</button>
+<button type='button' class='hover:text-white hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 py-2.5 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 px-5 mb-2 mr-2 text-sm font-medium text-center text-red-700 border border-red-700 rounded-lg'>Red</button>
+<button type='button' class='hover:text-white hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 py-2.5 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900 px-5 mb-2 mr-2 text-sm font-medium text-center text-yellow-400 border border-yellow-400 rounded-lg'>Yellow</button>
+<button type='button' class='hover:text-white hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 py-2.5 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900 px-5 mb-2 mr-2 text-sm font-medium text-center text-purple-700 border border-purple-700 rounded-lg'>Purple</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Button sizes
+
+Use these divs if you want to use smaller or larger buttons.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1zaXplcy1kaXYnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIHB4LTMgcHktMiB0ZXh0LXhzIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+RXh0cmEgc21hbGw8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgcHgtMyBweS0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5TbWFsbDwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdweS0yLjUgaG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgcHgtNSB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+QmFzZTwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1ibHVlLTgwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgZGFyazpiZy1ibHVlLTYwMCBkYXJrOmhvdmVyOmJnLWJsdWUtNzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBweC01IHB5LTMgdGV4dC1iYXNlIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+TGFyZ2U8L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0ncHktMy41IGhvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIHB4LTYgdGV4dC1iYXNlIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+RXh0cmEgbGFyZ2U8L2J1dHRvbj5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-sizes-div' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg'>Extra small</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>Small</button>
+<button type='button' class='py-2.5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>Base</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg'>Large</button>
+<button type='button' class='py-3.5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 px-6 text-base font-medium text-center text-white bg-blue-700 rounded-lg'>Extra large</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Button sizes with icon
+
+Use these divs if you want to use smaller or larger buttons.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1zaXplcy1kaXYnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC0zIHB5LTIgdGV4dC14cyBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIGJnLWJsdWUtNzAwIHJvdW5kZWQtbGcnPlxuICA8c3ZnIGNsYXNzPSd3LTMgaC0zIG1yLTIgdGV4dC13aGl0ZScgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMjAgMTYnPlxuICAgIDxwYXRoIGQ9J20xMC4wMzYgOC4yNzggOS4yNTgtNy43OUExLjk3OSAxLjk3OSAwIDAgMCAxOCAwSDJBMS45ODcgMS45ODcgMCAwIDAgLjY0MS41NDFsOS4zOTUgNy43MzdaJy8+XG4gICAgPHBhdGggZD0nTTExLjI0MSA5LjgxN2MtLjM2LjI3NS0uODAxLjQyNS0xLjI1NS40MjctLjQyOCAwLS44NDUtLjEzOC0xLjE4Ny0uMzk1TDAgMi42VjE0YTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMlYyLjVsLTguNzU5IDcuMzE3WicvPlxuICA8L3N2Zz5cbiAgRXh0cmEgc21hbGxcbjwvYnV0dG9uPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1ibHVlLTgwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgZGFyazpiZy1ibHVlLTYwMCBkYXJrOmhvdmVyOmJnLWJsdWUtNzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgcHgtMyBweS0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy0zIGgtMyBtci0yIHRleHQtd2hpdGUnIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J2N1cnJlbnRDb2xvcicgdmlld0JveD0nMCAwIDIwIDE2Jz5cbiAgICA8cGF0aCBkPSdtMTAuMDM2IDguMjc4IDkuMjU4LTcuNzlBMS45NzkgMS45NzkgMCAwIDAgMTggMEgyQTEuOTg3IDEuOTg3IDAgMCAwIC42NDEuNTQxbDkuMzk1IDcuNzM3WicvPlxuICAgIDxwYXRoIGQ9J00xMS4yNDEgOS44MTdjLS4zNi4yNzUtLjgwMS40MjUtMS4yNTUuNDI3LS40MjggMC0uODQ1LS4xMzgtMS4xODctLjM5NUwwIDIuNlYxNGEyIDIgMCAwIDAgMiAyaDE2YTIgMiAwIDAgMCAyLTJWMi41bC04Ljc1OSA3LjMxN1onLz5cbiAgPC9zdmc+XG4gIFNtYWxsXG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0ncHktMi41IGhvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC01IHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy0zLjUgaC0zLjUgbXItMiB0ZXh0LXdoaXRlJyBhcmlhLWhpZGRlbj0ndHJ1ZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBmaWxsPSdjdXJyZW50Q29sb3InIHZpZXdCb3g9JzAgMCAyMCAxNic+XG4gICAgPHBhdGggZD0nbTEwLjAzNiA4LjI3OCA5LjI1OC03Ljc5QTEuOTc5IDEuOTc5IDAgMCAwIDE4IDBIMkExLjk4NyAxLjk4NyAwIDAgMCAuNjQxLjU0MWw5LjM5NSA3LjczN1onLz5cbiAgICA8cGF0aCBkPSdNMTEuMjQxIDkuODE3Yy0uMzYuMjc1LS44MDEuNDI1LTEuMjU1LjQyNy0uNDI4IDAtLjg0NS0uMTM4LTEuMTg3LS4zOTVMMCAyLjZWMTRhMiAyIDAgMCAwIDIgMmgxNmEyIDIgMCAwIDAgMi0yVjIuNWwtOC43NTkgNy4zMTdaJy8+XG4gIDwvc3ZnPlxuICBCYXNlXG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHB4LTUgcHktMyB0ZXh0LWJhc2UgZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy00IGgtNCBtci0yIHRleHQtd2hpdGUnIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J2N1cnJlbnRDb2xvcicgdmlld0JveD0nMCAwIDIwIDE2Jz5cbiAgICA8cGF0aCBkPSdtMTAuMDM2IDguMjc4IDkuMjU4LTcuNzlBMS45NzkgMS45NzkgMCAwIDAgMTggMEgyQTEuOTg3IDEuOTg3IDAgMCAwIC42NDEuNTQxbDkuMzk1IDcuNzM3WicvPlxuICAgIDxwYXRoIGQ9J00xMS4yNDEgOS44MTdjLS4zNi4yNzUtLjgwMS40MjUtMS4yNTUuNDI3LS40MjggMC0uODQ1LS4xMzgtMS4xODctLjM5NUwwIDIuNlYxNGEyIDIgMCAwIDAgMiAyaDE2YTIgMiAwIDAgMCAyLTJWMi41bC04Ljc1OSA3LjMxN1onLz5cbiAgPC9zdmc+XG4gIExhcmdlXG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0ncHktMy41IGhvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC02IHRleHQtYmFzZSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIGJnLWJsdWUtNzAwIHJvdW5kZWQtbGcnPlxuICA8c3ZnIGNsYXNzPSd3LTQgaC00IG1yLTIgdGV4dC13aGl0ZScgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMjAgMTYnPlxuICAgIDxwYXRoIGQ9J20xMC4wMzYgOC4yNzggOS4yNTgtNy43OUExLjk3OSAxLjk3OSAwIDAgMCAxOCAwSDJBMS45ODcgMS45ODcgMCAwIDAgLjY0MS41NDFsOS4zOTUgNy43MzdaJy8+XG4gICAgPHBhdGggZD0nTTExLjI0MSA5LjgxN2MtLjM2LjI3NS0uODAxLjQyNS0xLjI1NS40MjctLjQyOCAwLS44NDUtLjEzOC0xLjE4Ny0uMzk1TDAgMi42VjE0YTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMlYyLjVsLTguNzU5IDcuMzE3WicvPlxuICA8L3N2Zz5cbiAgRXh0cmEgbGFyZ2VcbjwvYnV0dG9uPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-sizes-div' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-3 h-3 mr-2 text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 16'>
+    <path d='m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z'/>
+    <path d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'/>
+  </svg>
+  Extra small
+</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-3 h-3 mr-2 text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 16'>
+    <path d='m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z'/>
+    <path d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'/>
+  </svg>
+  Small
+</button>
+<button type='button' class='py-2.5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-3.5 h-3.5 mr-2 text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 16'>
+    <path d='m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z'/>
+    <path d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'/>
+  </svg>
+  Base
+</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-4 h-4 mr-2 text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 16'>
+    <path d='m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z'/>
+    <path d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'/>
+  </svg>
+  Large
+</button>
+<button type='button' class='py-3.5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-6 text-base font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-4 h-4 mr-2 text-white' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 20 16'>
+    <path d='m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z'/>
+    <path d='M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z'/>
+  </svg>
+  Extra large
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Buttons with icon
+
+Use the following divs to add a [SVG icon](https://flowbite.com/icons/) inside the button either on the left or right side.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1pY29uLWRpdicgY2xhc3M9J2ZsZXgnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2hvdmVyOmJnLWJsdWUtODAwIGZvY3VzOnJpbmctNCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy1ibHVlLTMwMCBweS0yLjUgZGFyazpiZy1ibHVlLTYwMCBkYXJrOmhvdmVyOmJnLWJsdWUtNzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgcHgtNSBtci0yIHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy0zLjUgaC0zLjUgbXItMicgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMTggMjEnPlxuICAgIDxwYXRoIGQ9J00xNSAxMmExIDEgMCAwIDAgLjk2Mi0uNzI2bDItN0ExIDEgMCAwIDAgMTcgM0gzLjc3TDMuMTc1Ljc0NUExIDEgMCAwIDAgMi4yMDggMEgxYTEgMSAwIDAgMCAwIDJoLjQzOGwuNiAyLjI1NXYuMDE5bDIgNyAuNzQ2IDIuOTg2QTMgMyAwIDEgMCA5IDE3YTIuOTY2IDIuOTY2IDAgMCAwLS4xODQtMWgyLjM2OGMtLjExOC4zMi0uMTguNjU5LS4xODQgMWEzIDMgMCAxIDAgMy0zSDYuNzhsLS41LTJIMTVaJy8+XG4gIDwvc3ZnPlxuICBCdXkgbm93XG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIHB5LTIuNSBkYXJrOmJnLWJsdWUtNjAwIGRhcms6aG92ZXI6YmctYmx1ZS03MDAgZGFyazpmb2N1czpyaW5nLWJsdWUtODAwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBweC01IHRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1jZW50ZXIgdGV4dC13aGl0ZSBiZy1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgICBDaG9vc2UgcGxhblxuICAgIDxzdmcgY2xhc3M9J3ctMy41IGgtMy41IG1sLTInIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J25vbmUnIHZpZXdCb3g9JzAgMCAxNCAxMCc+XG4gICAgPHBhdGggc3Ryb2tlPSdjdXJyZW50Q29sb3InIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgc3Ryb2tlLXdpZHRoPScyJyBkPSdNMSA1aDEybTAgMEw5IDFtNCA0TDkgOScvPlxuICA8L3N2Zz5cbjwvYnV0dG9uPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-icon-div' class='flex' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 mr-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-3.5 h-3.5 mr-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 18 21'>
+    <path d='M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z'/>
+  </svg>
+  Buy now
+</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+    Choose plan
+    <svg class='w-3.5 h-3.5 ml-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 10'>
+    <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M1 5h12m0 0L9 1m4 4L9 9'/>
+  </svg>
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Button with label
+
+This div can be used to show a notification count or helper text inside a button using the badge element.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1sYWJlbC1kaXYnIGNsYXNzPSdmbGV4JyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdweS0yLjUgaG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHB4LTUgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIGJnLWJsdWUtNzAwIHJvdW5kZWQtbGcnPlxuICBNZXNzYWdlc1xuICA8c3BhbiBjbGFzcz0naW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHctNCBoLTQgbWwtMiB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdGV4dC1ibHVlLTgwMCBiZy1ibHVlLTIwMCByb3VuZGVkLWZ1bGwnPlxuICAgIDJcbiAgPC9zcGFuPlxuPC9idXR0b24+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-label-div' class='flex' github='components/buttons.md' show_dark=true >
+<button type='button' class='py-2.5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+  Messages
+  <span class='inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full'>
+    2
+  </span>
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Icon buttons
+
+Sometimes you need a button to indicate an action using only an icon.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1pY29uLW9ubHktZGl2JyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1ibHVlLTgwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgcC0yLjUgZGFyazpiZy1ibHVlLTYwMCBkYXJrOmhvdmVyOmJnLWJsdWUtNzAwIGRhcms6Zm9jdXM6cmluZy1ibHVlLTgwMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+XG4gIDxzdmcgY2xhc3M9J3ctNSBoLTUnIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J25vbmUnIHZpZXdCb3g9JzAgMCAxNCAxMCc+XG4gICAgPHBhdGggc3Ryb2tlPSdjdXJyZW50Q29sb3InIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgc3Ryb2tlLXdpZHRoPScyJyBkPSdNMSA1aDEybTAgMEw5IDFtNCA0TDkgOScvPlxuICA8L3N2Zz5cbiAgPHNwYW4gY2xhc3M9J3NyLW9ubHknPkljb24gZGVzY3JpcHRpb248L3NwYW4+XG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS04MDAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtMzAwIHAtMi41IGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIG1yLTIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIGJnLWJsdWUtNzAwIHJvdW5kZWQtZnVsbCc+XG4gIDxzdmcgY2xhc3M9J3ctNCBoLTQnIGFyaWEtaGlkZGVuPSd0cnVlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9J25vbmUnIHZpZXdCb3g9JzAgMCAxNCAxMCc+XG4gICAgPHBhdGggc3Ryb2tlPSdjdXJyZW50Q29sb3InIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcgc3Ryb2tlLXdpZHRoPScyJyBkPSdNMSA1aDEybTAgMEw5IDFtNCA0TDkgOScvPlxuICA8L3N2Zz5cbiAgPHNwYW4gY2xhc3M9J3NyLW9ubHknPkljb24gZGVzY3JpcHRpb248L3NwYW4+XG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS03MDAgaG92ZXI6dGV4dC13aGl0ZSBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgcC0yLjUgZGFyazpib3JkZXItYmx1ZS01MDAgZGFyazp0ZXh0LWJsdWUtNTAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgZGFyazpob3ZlcjpiZy1ibHVlLTUwMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtYmx1ZS03MDAgYm9yZGVyIGJvcmRlci1ibHVlLTcwMCByb3VuZGVkLWxnJz5cbiAgPHN2ZyBjbGFzcz0ndy01IGgtNScgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMTggMTgnPlxuICAgIDxwYXRoIGQ9J00zIDdIMWExIDEgMCAwIDAtMSAxdjhhMiAyIDAgMCAwIDQgMFY4YTEgMSAwIDAgMC0xLTFabTEyLjk1NCAwSDEybDEuNTU4LTQuNWExLjc3OCAxLjc3OCAwIDAgMC0zLjMzMS0xLjA2QTI0Ljg1OSAyNC44NTkgMCAwIDEgNiA2Ljh2OS41ODZoLjExNEM4LjIyMyAxNi45NjkgMTEuMDE1IDE4IDEzLjYgMThjMS40IDAgMS41OTItLjUyNiAxLjg4LTEuMzE3bDIuMzU0LTdBMiAyIDAgMCAwIDE1Ljk1NCA3WicvPlxuICA8L3N2Zz5cbiAgPHNwYW4gY2xhc3M9J3NyLW9ubHknPkljb24gZGVzY3JpcHRpb248L3NwYW4+XG48L2J1dHRvbj5cbjxidXR0b24gdHlwZT0nYnV0dG9uJyBjbGFzcz0naG92ZXI6YmctYmx1ZS03MDAgaG92ZXI6dGV4dC13aGl0ZSBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgcC0yLjUgZGFyazpib3JkZXItYmx1ZS01MDAgZGFyazp0ZXh0LWJsdWUtNTAwIGRhcms6aG92ZXI6dGV4dC13aGl0ZSBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgZGFyazpob3ZlcjpiZy1ibHVlLTUwMCBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LWJsdWUtNzAwIGJvcmRlciBib3JkZXItYmx1ZS03MDAgcm91bmRlZC1mdWxsJz5cbiAgPHN2ZyBjbGFzcz0ndy00IGgtNCcgYXJpYS1oaWRkZW49J3RydWUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgZmlsbD0nY3VycmVudENvbG9yJyB2aWV3Qm94PScwIDAgMTggMTgnPlxuICAgIDxwYXRoIGQ9J00zIDdIMWExIDEgMCAwIDAtMSAxdjhhMiAyIDAgMCAwIDQgMFY4YTEgMSAwIDAgMC0xLTFabTEyLjk1NCAwSDEybDEuNTU4LTQuNWExLjc3OCAxLjc3OCAwIDAgMC0zLjMzMS0xLjA2QTI0Ljg1OSAyNC44NTkgMCAwIDEgNiA2Ljh2OS41ODZoLjExNEM4LjIyMyAxNi45NjkgMTEuMDE1IDE4IDEzLjYgMThjMS40IDAgMS41OTItLjUyNiAxLjg4LTEuMzE3bDIuMzU0LTdBMiAyIDAgMCAwIDE1Ljk1NCA3WicvPlxuICA8L3N2Zz5cbiAgPHNwYW4gY2xhc3M9J3NyLW9ubHknPkljb24gZGVzY3JpcHRpb248L3NwYW4+XG48L2J1dHRvbj5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-icon-only-div' github='components/buttons.md' show_dark=true >
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 p-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center mr-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+  <svg class='w-5 h-5' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 10'>
+    <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M1 5h12m0 0L9 1m4 4L9 9'/>
+  </svg>
+  <span class='sr-only'>Icon description</span>
+</button>
+<button type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 p-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center mr-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full'>
+  <svg class='w-4 h-4' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 10'>
+    <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M1 5h12m0 0L9 1m4 4L9 9'/>
+  </svg>
+  <span class='sr-only'>Icon description</span>
+</button>
+<button type='button' class='hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 p-2.5 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 inline-flex items-center mr-2 text-sm font-medium text-center text-blue-700 border border-blue-700 rounded-lg'>
+  <svg class='w-5 h-5' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 18 18'>
+    <path d='M3 7H1a1 1 0 0 0-1 1v8a2 2 0 0 0 4 0V8a1 1 0 0 0-1-1Zm12.954 0H12l1.558-4.5a1.778 1.778 0 0 0-3.331-1.06A24.859 24.859 0 0 1 6 6.8v9.586h.114C8.223 16.969 11.015 18 13.6 18c1.4 0 1.592-.526 1.88-1.317l2.354-7A2 2 0 0 0 15.954 7Z'/>
+  </svg>
+  <span class='sr-only'>Icon description</span>
+</button>
+<button type='button' class='hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 p-2.5 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800 dark:hover:bg-blue-500 inline-flex items-center text-sm font-medium text-center text-blue-700 border border-blue-700 rounded-full'>
+  <svg class='w-4 h-4' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 18 18'>
+    <path d='M3 7H1a1 1 0 0 0-1 1v8a2 2 0 0 0 4 0V8a1 1 0 0 0-1-1Zm12.954 0H12l1.558-4.5a1.778 1.778 0 0 0-3.331-1.06A24.859 24.859 0 0 1 6 6.8v9.586h.114C8.223 16.969 11.015 18 13.6 18c1.4 0 1.592-.526 1.88-1.317l2.354-7A2 2 0 0 0 15.954 7Z'/>
+  </svg>
+  <span class='sr-only'>Icon description</span>
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Loader
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1sb2FkZXItZGl2JyBnaXRodWI9J2NvbXBvbmVudHMvYnV0dG9ucy5tZCcgc2hvd19kYXJrPXRydWUgPlxuPGJ1dHRvbiBkaXNhYmxlZCB0eXBlPSdidXR0b24nIGNsYXNzPSdob3ZlcjpiZy1ibHVlLTgwMCBmb2N1czpyaW5nLTQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctYmx1ZS0zMDAgcHktMi41IGRhcms6YmctYmx1ZS02MDAgZGFyazpob3ZlcjpiZy1ibHVlLTcwMCBkYXJrOmZvY3VzOnJpbmctYmx1ZS04MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHB4LTUgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtY2VudGVyIHRleHQtd2hpdGUgYmctYmx1ZS03MDAgcm91bmRlZC1sZyc+XG4gICAgPHN2ZyBhcmlhLWhpZGRlbj0ndHJ1ZScgcm9sZT0nc3RhdHVzJyBjbGFzcz0nYW5pbWF0ZS1zcGluIGlubGluZSB3LTQgaC00IG1yLTMgdGV4dC13aGl0ZScgdmlld0JveD0nMCAwIDEwMCAxMDEnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+XG4gICAgPHBhdGggZD0nTTEwMCA1MC41OTA4QzEwMCA3OC4yMDUxIDc3LjYxNDIgMTAwLjU5MSA1MCAxMDAuNTkxQzIyLjM4NTggMTAwLjU5MSAwIDc4LjIwNTEgMCA1MC41OTA4QzAgMjIuOTc2NiAyMi4zODU4IDAuNTkwODIgNTAgMC41OTA4MkM3Ny42MTQyIDAuNTkwODIgMTAwIDIyLjk3NjYgMTAwIDUwLjU5MDhaTTkuMDgxNDQgNTAuNTkwOEM5LjA4MTQ0IDczLjE4OTUgMjcuNDAxMyA5MS41MDk0IDUwIDkxLjUwOTRDNzIuNTk4NyA5MS41MDk0IDkwLjkxODYgNzMuMTg5NSA5MC45MTg2IDUwLjU5MDhDOTAuOTE4NiAyNy45OTIxIDcyLjU5ODcgOS42NzIyNiA1MCA5LjY3MjI2QzI3LjQwMTMgOS42NzIyNiA5LjA4MTQ0IDI3Ljk5MjEgOS4wODE0NCA1MC41OTA4WicgZmlsbD1cIiNFNUU3RUJcIi8+XG4gICAgPHBhdGggZD0nTTkzLjk2NzYgMzkuMDQwOUM5Ni4zOTMgMzguNDAzOCA5Ny44NjI0IDM1LjkxMTYgOTcuMDA3OSAzMy41NTM5Qzk1LjI5MzIgMjguODIyNyA5Mi44NzEgMjQuMzY5MiA4OS44MTY3IDIwLjM0OEM4NS44NDUyIDE1LjExOTIgODAuODgyNiAxMC43MjM4IDc1LjIxMjQgNy40MTI4OUM2OS41NDIyIDQuMTAxOTQgNjMuMjc1NCAxLjk0MDI1IDU2Ljc2OTggMS4wNTEyNEM1MS43NjY2IDAuMzY3NTQxIDQ2LjY5NzYgMC40NDY4NDMgNDEuNzM0NSAxLjI3ODczQzM5LjI2MTMgMS42OTMyOCAzNy44MTMgNC4xOTc3OCAzOC40NTAxIDYuNjIzMjZDMzkuMDg3MyA5LjA0ODc0IDQxLjU2OTQgMTAuNDcxNyA0NC4wNTA1IDEwLjEwNzFDNDcuODUxMSA5LjU0ODU1IDUxLjcxOTEgOS41MjY4OSA1NS41NDAyIDEwLjA0OTFDNjAuODY0MiAxMC43NzY2IDY1Ljk5MjggMTIuNTQ1NyA3MC42MzMxIDE1LjI1NTJDNzUuMjczNSAxNy45NjQ4IDc5LjMzNDcgMjEuNTYxOSA4Mi41ODQ5IDI1Ljg0MUM4NC45MTc1IDI4LjkxMjEgODYuNzk5NyAzMi4yOTEzIDg4LjE4MTEgMzUuODc1OEM4OS4wODMgMzguMjE1OCA5MS41NDIxIDM5LjY3ODEgOTMuOTY3NiAzOS4wNDA5WicgZmlsbD0nY3VycmVudENvbG9yJy8+XG4gICAgPC9zdmc+XG4gICAgTG9hZGluZy4uLlxuPC9idXR0b24+XG48YnV0dG9uIGRpc2FibGVkIHR5cGU9J2J1dHRvbicgY2xhc3M9J3B5LTIuNSBob3ZlcjpiZy1ncmF5LTEwMCBob3Zlcjp0ZXh0LWJsdWUtNzAwIGZvY3VzOnotMTAgZm9jdXM6cmluZy00IGZvY3VzOm91dGxpbmUtbm9uZSBmb2N1czpyaW5nLWJsdWUtNzAwIGZvY3VzOnRleHQtYmx1ZS03MDAgZGFyazpiZy1ncmF5LTgwMCBkYXJrOnRleHQtZ3JheS00MDAgZGFyazpib3JkZXItZ3JheS02MDAgZGFyazpob3Zlcjp0ZXh0LXdoaXRlIGRhcms6aG92ZXI6YmctZ3JheS03MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIHB4LTUgbXItMiB0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtZ3JheS05MDAgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ncmF5LTIwMCByb3VuZGVkLWxnJz5cbiAgICA8c3ZnIGFyaWEtaGlkZGVuPSd0cnVlJyByb2xlPSdzdGF0dXMnIGNsYXNzPSdhbmltYXRlLXNwaW4gZGFyazp0ZXh0LWdyYXktNjAwIGlubGluZSB3LTQgaC00IG1yLTMgdGV4dC1ncmF5LTIwMCcgdmlld0JveD0nMCAwIDEwMCAxMDEnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+XG4gICAgPHBhdGggZD0nTTEwMCA1MC41OTA4QzEwMCA3OC4yMDUxIDc3LjYxNDIgMTAwLjU5MSA1MCAxMDAuNTkxQzIyLjM4NTggMTAwLjU5MSAwIDc4LjIwNTEgMCA1MC41OTA4QzAgMjIuOTc2NiAyMi4zODU4IDAuNTkwODIgNTAgMC41OTA4MkM3Ny42MTQyIDAuNTkwODIgMTAwIDIyLjk3NjYgMTAwIDUwLjU5MDhaTTkuMDgxNDQgNTAuNTkwOEM5LjA4MTQ0IDczLjE4OTUgMjcuNDAxMyA5MS41MDk0IDUwIDkxLjUwOTRDNzIuNTk4NyA5MS41MDk0IDkwLjkxODYgNzMuMTg5NSA5MC45MTg2IDUwLjU5MDhDOTAuOTE4NiAyNy45OTIxIDcyLjU5ODcgOS42NzIyNiA1MCA5LjY3MjI2QzI3LjQwMTMgOS42NzIyNiA5LjA4MTQ0IDI3Ljk5MjEgOS4wODE0NCA1MC41OTA4WicgZmlsbD0nY3VycmVudENvbG9yJy8+XG4gICAgPHBhdGggZD0nTTkzLjk2NzYgMzkuMDQwOUM5Ni4zOTMgMzguNDAzOCA5Ny44NjI0IDM1LjkxMTYgOTcuMDA3OSAzMy41NTM5Qzk1LjI5MzIgMjguODIyNyA5Mi44NzEgMjQuMzY5MiA4OS44MTY3IDIwLjM0OEM4NS44NDUyIDE1LjExOTIgODAuODgyNiAxMC43MjM4IDc1LjIxMjQgNy40MTI4OUM2OS41NDIyIDQuMTAxOTQgNjMuMjc1NCAxLjk0MDI1IDU2Ljc2OTggMS4wNTEyNEM1MS43NjY2IDAuMzY3NTQxIDQ2LjY5NzYgMC40NDY4NDMgNDEuNzM0NSAxLjI3ODczQzM5LjI2MTMgMS42OTMyOCAzNy44MTMgNC4xOTc3OCAzOC40NTAxIDYuNjIzMjZDMzkuMDg3MyA5LjA0ODc0IDQxLjU2OTQgMTAuNDcxNyA0NC4wNTA1IDEwLjEwNzFDNDcuODUxMSA5LjU0ODU1IDUxLjcxOTEgOS41MjY4OSA1NS41NDAyIDEwLjA0OTFDNjAuODY0MiAxMC43NzY2IDY1Ljk5MjggMTIuNTQ1NyA3MC42MzMxIDE1LjI1NTJDNzUuMjczNSAxNy45NjQ4IDc5LjMzNDcgMjEuNTYxOSA4Mi41ODQ5IDI1Ljg0MUM4NC45MTc1IDI4LjkxMjEgODYuNzk5NyAzMi4yOTEzIDg4LjE4MTEgMzUuODc1OEM4OS4wODMgMzguMjE1OCA5MS41NDIxIDM5LjY3ODEgOTMuOTY3NiAzOS4wNDA5WicgZmlsbD1cIiMxQzY0RjJcIi8+XG4gICAgPC9zdmc+XG4gICAgTG9hZGluZy4uLlxuPC9idXR0b24+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-loader-div' github='components/buttons.md' show_dark=true >
+<button disabled type='button' class='hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center px-5 mr-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg'>
+    <svg aria-hidden='true' role='status' class='animate-spin inline w-4 h-4 mr-3 text-white' viewBox='0 0 100 101' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z' fill="#E5E7EB"/>
+    <path d='M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z' fill='currentColor'/>
+    </svg>
+    Loading...
+</button>
+<button disabled type='button' class='py-2.5 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center px-5 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg'>
+    <svg aria-hidden='true' role='status' class='animate-spin dark:text-gray-600 inline w-4 h-4 mr-3 text-gray-200' viewBox='0 0 100 101' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z' fill='currentColor'/>
+    <path d='M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z' fill="#1C64F2"/>
+    </svg>
+    Loading...
+</button>
+</div>
+"""
+
+Kino.nothing()
+```
+
+### Disabled
+
+Use the following styles to indicate a disabled button. This can be often used inside form elements to disable the submit button before all the form elements have been completed and validated.
+
+<!-- livebook:{"attrs":"eyJkZWZhdWx0X2hlaWdodCI6IjMxN3B4IiwiaHRtbCI6IjxkaXYgaWQ9J2J1dHRvbi1kaXNhYmxlZC1kaXYnIGdpdGh1Yj0nY29tcG9uZW50cy9idXR0b25zLm1kJyBzaG93X2Rhcms9dHJ1ZSA+XG48YnV0dG9uIHR5cGU9J2J1dHRvbicgY2xhc3M9J2Rhcms6YmctYmx1ZS01MDAgcHktMi41IHB4LTUgdGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWNlbnRlciB0ZXh0LXdoaXRlIGJnLWJsdWUtNDAwIHJvdW5kZWQtbGcgY3Vyc29yLW5vdC1hbGxvd2VkJyBkaXNhYmxlZD5EaXNhYmxlZCBidXR0b248L2J1dHRvbj5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div id='button-disabled-div' github='components/buttons.md' show_dark=true >
+<button type='button' class='dark:bg-blue-500 py-2.5 px-5 text-sm font-medium text-center text-white bg-blue-400 rounded-lg cursor-not-allowed' disabled>Disabled button</button>
+</div>
+"""
+
+Kino.nothing()
+```

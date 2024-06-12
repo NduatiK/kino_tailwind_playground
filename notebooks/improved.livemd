@@ -1,0 +1,135 @@
+# Tasks
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.9.3"},
+  {:kino_tailwind_playground,
+   path: Path.expand(Path.join(["Project", "kino_tailwind_playground-main"]))}
+])
+```
+
+## Section
+
+```elixir
+assigns = %{
+  this_week: [
+    %{
+      type: "conversation due",
+      count: 1,
+      done?: true,
+      color: "green"
+    },
+    %{
+      type: "tasks due",
+      count: 3,
+      done?: false,
+      color: "#3793ea"
+    },
+    %{
+      type: "pages pending",
+      count: 2,
+      done?: false,
+      color: "#ff772b"
+    }
+  ],
+  today: [
+    %{
+      type: "conversation due",
+      count: 1,
+      done?: true,
+      color: "#b3bfbf"
+    },
+    %{
+      type: "tasks due",
+      count: 2,
+      done?: false,
+      color: "#f7662a"
+    }
+  ]
+}
+```
+
+<!-- livebook:{"attrs":{"default_height":"317px","html":"<div class=\"p-4 bg-[#f5efe6] font-[Rubik] text-sm text-[#1c484f]\">\n  <div class=\"rounded-md p-2 w-[250px] bg-[#f6d0a6] border-l-[3px] border-b-[3px] border-[#deb994]\">\n    <span class=\"font-medium text-[#6b5342]\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" fill=\"none\" viewBox=\"0 0 24 24\" width=14 class=\"inline\" stroke-width=\"1.5\" stroke=\"currentColor\" >\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z\" />\n    </svg>\n    WHAT'S ON YOUR PLATE?</span>\n    <div class=\"mt-2 overflow-hidden rounded-md bg-white border-l-[3px] border-b-[3px] border-[#deb994] border-b\">\n      <div class=\"px-3 py-2 space-y-1 bg-slate-100 border-b\">\n        <span class=\"font-medium\">THIS WEEK</span>\n      </div>\n      <div class=\"p-3 space-y-1\">\n        <%=for task <- this_week do%>\n          <% style=if(task.done?, do: \"line-through text-[#778c90]\" , else: \"text-[#{task.color}]\" ) %>\n            <div class='<%= style %>'>\n              <span class=\"font-medium\"><%= task.count %></span>\n              <span class=\"text-gray-500\"><%= task.type %></span>\n            </div>\n            <%end%>\n      </div>\n      <div class=\"px-3 py-2 space-y-1 bg-slate-100 border-t border-b\">\n        <span class=\"font-medium\">TODAY</span>\n      </div>\n      <div class=\"p-3 space-y-1 font-[#083339]\">\n        <%=for task <- today do%>\n          <% color=if(task.done?, do: \"slate-500\" , else: \"[#{task.color}]\" ) %>\n            <div class='text-<%= color %>'>\n              <span class='bg-<%= color %> w-2 h-full rounded-lg opacity-50'>&nbsp</span>\n              <span class='<%= if(task.done?, do: \"line-through\" ) %>'>\n              <span class=\"pl-1 font-medium\"><%= task.count %></span>\n              <span class='<%= if(task.done?, do: \"font-normal\", else: \"font-medium\")  %>'><%= task.type %></span>\n              </span>\n            </div>\n            <%end%>\n      </div>\n    </div>\n  </div>\n</div>"},"chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div class="p-4 bg-[#f5efe6] font-[Rubik] text-sm text-[#1c484f]">
+  <div class="rounded-md p-2 w-[250px] bg-[#f6d0a6] border-l-[3px] border-b-[3px] border-[#deb994]">
+    <span class="font-medium text-[#6b5342]">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" width=14 class="inline" stroke-width="1.5" stroke="currentColor" >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    WHAT'S ON YOUR PLATE?</span>
+    <div class="mt-2 overflow-hidden rounded-md bg-white border-l-[3px] border-b-[3px] border-[#deb994] border-b">
+      <div class="px-3 py-2 space-y-1 bg-slate-100 border-b">
+        <span class="font-medium">THIS WEEK</span>
+      </div>
+      <div class="p-3 space-y-1">
+        <%=for task <- this_week do%>
+          <% style=if(task.done?, do: "line-through text-[#778c90]" , else: "text-[#{task.color}]" ) %>
+            <div class='<%= style %>'>
+              <span class="font-medium"><%= task.count %></span>
+              <span class="text-gray-500"><%= task.type %></span>
+            </div>
+            <%end%>
+      </div>
+      <div class="px-3 py-2 space-y-1 bg-slate-100 border-t border-b">
+        <span class="font-medium">TODAY</span>
+      </div>
+      <div class="p-3 space-y-1 font-[#083339]">
+        <%=for task <- today do%>
+          <% color=if(task.done?, do: "slate-500" , else: "[#{task.color}]" ) %>
+            <div class='text-<%= color %>'>
+              <span class='bg-<%= color %> w-2 h-full rounded-lg opacity-50'>&nbsp</span>
+              <span class='<%= if(task.done?, do: "line-through" ) %>'>
+              <span class="pl-1 font-medium"><%= task.count %></span>
+              <span class='<%= if(task.done?, do: "font-normal", else: "font-medium")  %>'><%= task.type %></span>
+              </span>
+            </div>
+            <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+"""
+
+Kino.nothing()
+```
+
+<!-- livebook:{"attrs":{"default_height":"206px","html":"<div class=\"p-4 bg-[#f5efe6] font-[Rubik] text-sm text-[#123d43]\">\n  <div class=\"rounded-md p-4 pb-2 w-[300px] bg-white border-l-[3px] border-b-[3px] border-[#dbd4cb]\">\n    <span class=\"font-medium text-slate-800\">Abstract Update 3</span>\n    <div class=\"text-xs text-slate-600\">Last updated 1 week ago</div>\n    <div class=\"mt-2 flex flex-row space-x-4\">\n      <div class=\"flex flex-row space-x-1 h-14\">\n        <%=for height <- [10, 30,80,80,80,80] do%>\n          <div class='w-2.5 rounded-[1px] h-[<%= height %>%] self-end bg-blue-300'></div>\n          <%end%>\n            <div class='w-2.5 rounded-[1px] h-[100%] self-end bg-blue-600'></div>\n      </div>\n      <div class=\"text-xs w-full\">\n        <div class=\"p-1\">\n          <span class=\"font-medium text-blue-600\">24</span> tasks open\n        </div>\n        <div class=\"p-1 bg-slate-200 rounded-sm flex flex-row items-center\">\n          <span class='bg-slate-400 w-1 h-full mr-1 rounded-lg'>&nbsp</span>\n          <span class=\"font-medium\">&nbsp;7</span>&nbsp;assigned to you\n          <div class=\"ml-1 bg-slate-400 rounded-full h-3.5 w-3.5 inline-block\"></div>\n        </div>\n      </div>\n    </div>\n    <div class=\"mt-4 -space-x-2\">\n      <div class=\"bg-slate-400 ring-white ring-2 rounded-full h-6 w-6 inline-block\"></div>\n      <div class=\"bg-slate-500 ring-white ring-2 rounded-full h-6 w-6 inline-block\"></div>\n    </div>\n  </div>\n</div>\n</div>"},"chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+html = """
+<div class="p-4 bg-[#f5efe6] font-[Rubik] text-sm text-[#123d43]">
+  <div class="rounded-md p-4 pb-2 w-[300px] bg-white border-l-[3px] border-b-[3px] border-[#dbd4cb]">
+    <span class="font-medium text-slate-800">Abstract Update 3</span>
+    <div class="text-xs text-slate-600">Last updated 1 week ago</div>
+    <div class="mt-2 flex flex-row space-x-4">
+      <div class="flex flex-row space-x-1 h-14">
+        <%=for height <- [10, 30,80,80,80,80] do%>
+          <div class='w-2.5 rounded-[1px] h-[<%= height %>%] self-end bg-blue-300'></div>
+          <%end%>
+            <div class='w-2.5 rounded-[1px] h-[100%] self-end bg-blue-600'></div>
+      </div>
+      <div class="text-xs w-full">
+        <div class="p-1">
+          <span class="font-medium text-blue-600">24</span> tasks open
+        </div>
+        <div class="p-1 bg-slate-200 rounded-sm flex flex-row items-center">
+          <span class='bg-slate-400 w-1 h-full mr-1 rounded-lg'>&nbsp</span>
+          <span class="font-medium">&nbsp;7</span>&nbsp;assigned to you
+          <div class="ml-1 bg-slate-400 rounded-full h-3.5 w-3.5 inline-block"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 -space-x-2">
+      <div class="bg-slate-400 ring-white ring-2 rounded-full h-6 w-6 inline-block"></div>
+      <div class="bg-slate-500 ring-white ring-2 rounded-full h-6 w-6 inline-block"></div>
+    </div>
+  </div>
+</div>
+</div>
+"""
+
+Kino.nothing()
+```

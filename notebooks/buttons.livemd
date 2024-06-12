@@ -1,0 +1,17 @@
+# Buttons
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.9.3"},
+  {:kino_tailwind_playground,
+   path: Path.expand(Path.join(["Project", "kino_tailwind_playground-main"]))}
+])
+```
+
+## Section
+
+<!-- livebook:{"attrs":{"default_height":"117px","default_width":"375px","html":"<div class=\"relative h-full\">\n<div class=\"absolute flex flex-row h-full\">\n  <div class=\"p-4 bg-yellow-400 h-full\">\n  </div>\n  <div class=\"p-4 bg-black h-full\">\n  </div>\n  <div class=\"p-4 bg-gray-200 h-full\">\n  </div>\n</div>\n<div class=\"p-4 flex flex-col space-y-2 \">\n\n  <button class=\"\n      w-24\n    relative\n    rounded-md\n    bg-sky-500\n    px-3 py-1.5\n    text-sm/6 text-white\n    font-[Inter] font-semibold\n    shadow-[inset_0_1px_0_#ffffff1e]\n    before:absolute before:inset-0 before:rounded-md before:mix-blend-multiply before:shadow-sm before:ring-1 before:ring-sky-600/90\n    after:hover:absolute after:hover:inset-0 after:hover:rounded-md after:hover:bg-white/5\">\n              Submit\n  </button>\n  <button class=\"\n    w-24\n    relative\n    rounded-md\n    bg-white\n    px-3 py-1.5\n    text-sm/6 text-black\n    font-[Inter] font-semibold\n    shadow-[inset_0_1px_0_#ffffff1e]\n    before:absolute before:inset-0 before:rounded-md before:mix-blend-multiply before:shadow-sm before:ring-1 before:ring-black/20\n    after:hover:absolute after:hover:inset-0 after:hover:rounded-md after:hover:bg-white/5\">\n              Submit\n  </button>\n</div>\n</div>"},"chunks":null,"kind":"Elixir.KinoTailwindPlayground","livebook_object":"smart_cell"} -->
+
+```elixir
+Kino.nothing()
+```
